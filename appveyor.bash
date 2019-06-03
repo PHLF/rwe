@@ -7,6 +7,12 @@ set -euo pipefail
 # Refresh packages list
 pacman -Syq
 
+# Remove ada and objc packages.
+# They are no longer supported
+# and prevent installing GCC 9.
+# See https://github.com/msys2/MINGW-packages/issues/5434
+pacman -R mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc
+
 # Install build tools.
 # Except cmake, because for some reason if you install it
 # then you'll get exit code 127 when you try to call it.
