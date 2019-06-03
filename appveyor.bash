@@ -11,7 +11,7 @@ pacman -Syq
 # They are no longer supported
 # and prevent installing GCC 9.
 # See https://github.com/msys2/MINGW-packages/issues/5434
-pacman -Rq --noconfirm mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc
+pacman -R --noconfirm mingw-w64-x86_64-gcc-ada mingw-w64-x86_64-gcc-objc
 
 # Install build tools.
 # Except cmake, because for some reason if you install it
